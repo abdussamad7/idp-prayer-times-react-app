@@ -4,11 +4,9 @@ import Logo from '../../_components/logo/logo';
 import Clock from '../../_components/clock/clock';
 import PrayerTimes from '../../_components/prayer-times/prayer-times';
 import Date from '../../_components/date/date';
-import BuildNumber from '../../_components/build-number/build-number';
-import SunriseAndZawwal from '../../_components/sunrise-and-zawwal/sunrise-and-zawwal';
-import AdditionalMessage from '../../_components/additional-message/additional-message';
 import AppConfig from '../../_components/app-config/app-config';
 import Branding from '../../_components/branding/branding';
+import JummahTimes from '../../_components/jummah-times/jummah-times';
 
 class View1 extends Component {
   constructor(props) {
@@ -38,22 +36,14 @@ class View1 extends Component {
             <div className="row">
               <Date />
             </div>
-            <div className="row">
-              <AdditionalMessage
-                message={this.state._appConfig.get('Text_Donate_Message')}
-              />
-            </div>
           </div>
           <div className="col-12 col-md-6">
             <div className="row">
               <PrayerTimes />
             </div>
-            <div className="row">
-              <SunriseAndZawwal />
-            </div>
           </div>
+          <JummahTimes />
         </div>
-        <BuildNumber />
         <Branding />
       </div>
     );

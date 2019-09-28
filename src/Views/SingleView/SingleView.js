@@ -4,8 +4,6 @@ import Logo from '../../_components/logo/logo';
 import Clock from '../../_components/clock/clock';
 import Date from '../../_components/date/date';
 import BuildNumber from '../../_components/build-number/build-number';
-import SunriseAndZawwal from '../../_components/sunrise-and-zawwal/sunrise-and-zawwal';
-import AdditionalMessage from '../../_components/additional-message/additional-message';
 import AppConfig from '../../_components/app-config/app-config';
 import Branding from '../../_components/branding/branding';
 import PrayerTimesSingleView from '../../_components/prayer-times-single-view/prayer-times-single-view';
@@ -39,18 +37,10 @@ class SingleView extends Component {
             <div className="row">
               <Date />
             </div>
-            <div className="row">
-              <AdditionalMessage
-                message={this.state._appConfig.get('SingleView_Message')}
-              />
-            </div>
           </div>
           <div className="col-12 col-md-9">
             <div className="row">
               <PrayerTimesSingleView />
-            </div>
-            <div className="row">
-              <SunriseAndZawwal />
             </div>
             <div className="row">
               <JummahTimes />
