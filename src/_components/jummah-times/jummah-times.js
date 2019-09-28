@@ -50,8 +50,8 @@ class JummahTimes extends Component {
         <thead>
           <tr>
             <th />
-            <th>{this.state._appConfig.get('Jummah_slot_1_label')}</th>
-            <th>{this.state._appConfig.get('Jummah_slot_2_label')}</th>
+            <th><strong>Khutbah</strong></th>
+            <th><strong>Jama'ah</strong></th>
           </tr>
         </thead>
         <tbody>

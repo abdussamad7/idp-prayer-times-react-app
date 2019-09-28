@@ -1,9 +1,22 @@
 .AdditionalMessageWrapper {
   text-align: center;
   margin: 0 auto;
-
-  font-size: 4em;
+  margin-right: 10px;
+  font-size: 1em;
   margin-top: 100px;
+}
+
+.button {
+    border-color: #e60050;
+    padding: 9px 9px;
+    border-radius: 5px;
+    font-size: 13px;
+    border: 1px solid;
+}
+
+a {
+  color: white;
+   text-decoration: none;
 }
 
 .AdditionalMessageWrapper p {
@@ -17,8 +30,9 @@
 
 @media only screen and (max-width: 600px) {
   .AdditionalMessageWrapper {
-    font-size: 2em;
-    margin-top: 10px;
+    font-size: 1em;
+    margin-top: 15px;
+    margin-right: 10px;
   }
   .AdditionalMessageWrapper .middle {
     font-size: 1em;
@@ -27,8 +41,8 @@
 
 @media only screen and (min-width: 600px) and (max-width: 1024px) {
   .AdditionalMessageWrapper {
-    font-size: 2em;
-    margin-top: 10px;
+    font-size: 1em;
+    margin-top: 15px;
   }
   .AdditionalMessageWrapper .middle {
     font-size: 1em;

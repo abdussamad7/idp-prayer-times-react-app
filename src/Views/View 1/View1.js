@@ -6,6 +6,7 @@ import PrayerTimes from '../../_components/prayer-times-single-view/prayer-times
 import Date from '../../_components/date/date';
 import AppConfig from '../../_components/app-config/app-config';
 import JummahTimes from '../../_components/jummah-times/jummah-times';
+import AdditionalMessage from '../../_components/additional-message/additional-message';
 
 class View1 extends Component {
   constructor(props) {
@@ -42,6 +43,7 @@ class View1 extends Component {
             </div>
           </div>
           <JummahTimes />
+          <AdditionalMessage />
         </div>
       </div>
     );
