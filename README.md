@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="" alt="IDP Logo" />
+  <img src="https://github.com/abdussamad7/idp-prayer-times-react-app/blob/master/branding/idplogo.jpeg" alt="IDP Logo" />
 </p>
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/374fbcfb-e2e9-451c-a970-310194e51027/deploy-status)](https://app.netlify.com/sites/mosque-screen/deploys)
@@ -9,7 +9,7 @@
 Built for Al Nehar Mosque & Education Centre
 
 ## Screenshot
-<img src="" alt="IDP Logo" />
+<img src="https://github.com/abdussamad7/idp-prayer-times-react-app/blob/master/screenshots/screenshot-1.png" alt="App Screenshot" />
 
 ## Need help?
 
