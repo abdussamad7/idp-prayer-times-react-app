@@ -42,8 +42,16 @@ class View1 extends Component {
               <PrayerTimes />
             </div>
           </div>
-          <JummahTimes />
-          <AdditionalMessage />
+          <div className="col-12 col-md-6">
+            <div className="row">
+              <JummahTimes />
+            </div>
+          </div>
+          <div className="col-12 col-md-6">
+            <div className="row">
+              <AdditionalMessage />
+            </div>
+          </div>
         </div>
       </div>
     );
