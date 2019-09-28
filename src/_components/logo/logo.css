@@ -1,8 +1,8 @@
 .LogoWrapper img {
-  width: 150px;
+  width: 107px;
   display: block;
   position: fixed;
-  left: 50%;
+  left: 83%;
   transform: translateX(-50%);
 }
 

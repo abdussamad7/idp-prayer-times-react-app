@@ -1,14 +1,9 @@
 import React, { Component } from 'react';
 import './Slider.css';
 import View1 from '../Views/View 1/View1';
-import View2 from '../Views/View 2/View2';
-import View3 from '../Views/View 3/View3';
-import View4 from '../Views/View 4/View4';
-import View6 from '../Views/View 6/View6';
 import SingleView from '../Views/SingleView/SingleView';
 import GoogleSlides from '../GoogleSlides/GoogleSlides';
 import config from '../config.json';
-import BlackoutPeriods from '../_components/blackout-periods/blackout-periods';
 import AppConfig from '../_components/app-config/app-config';
 
 class Slider extends Component {
@@ -44,37 +39,7 @@ class Slider extends Component {
   }
 
   getSlides() {
-    return [<View1 />, <View2 />, <View3 />, <View4 />, <View6 />];
-  }
-
-  next() {
-    var blackoutPeriods = new BlackoutPeriods();
-    if (blackoutPeriods.checkIfBlackoutPeriod()) {
-      this.setState(() => ({
-        currentSlide: blackoutPeriods.state.blackOutSlide,
-        currentPosition: 0
-      }));
-    } else if (this.state.sliderMode === 'single-view') {
-      this.setState(() => ({
-        currentSlide: this.getSingleView()
-      }));
-    } else {
-      this.nextSlide();
-    }
-  }
-
-  nextSlide() {
-    var newSlidePosition = this.state.currentPosition + 1;
-    var isLastSlide = newSlidePosition >= this.state.slides.length;
-
-    if (isLastSlide) {
-      newSlidePosition = 0;
-    }
-
-    this.setState(() => ({
-      currentSlide: this.state.slides[newSlidePosition],
-      currentPosition: newSlidePosition
-    }));
+    return [<View1 />];
   }
 
   showGoogleSlides() {

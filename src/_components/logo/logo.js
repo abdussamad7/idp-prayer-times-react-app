@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './logo.css';
+import IDP from './assets/idplogonew.png';
 import AppConfig from '../app-config/app-config';
 
 class Logo extends Component {
@@ -13,8 +14,8 @@ class Logo extends Component {
 
   render() {
     return (
-      <div className="LogoWrapper d-none d-lg-block">
-        <img src={this.state.logo} alt="" />
+      <div className="LogoWrapper">
+        <img src={IDP} alt="IDP Logo" />
       </div>
     );
   }

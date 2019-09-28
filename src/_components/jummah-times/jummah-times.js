@@ -29,37 +29,44 @@ class JummahTimes extends Component {
 
   getJummahTimes() {
     var summerTimes = {
-      slot_1: this.state._appConfig.get('Jummah_slot_1_summer'),
-      slot_2: this.state._appConfig.get('Jummah_slot_2_summer')
+      slot_1: '1:00',
+      slot_2: '1:30',
+      slot_3: '2:00',
+      slot_4: '2:15'
     };
 
     var winterTimes = {
-      slot_1: this.state._appConfig.get('Jummah_slot_1_winter'),
-      slot_2: this.state._appConfig.get('Jummah_slot_2_winter')
+      slot_1: '12:45',
+      slot_2: '1:15',
+      slot_3: '1:45',
+      slot_4: '2:00'
     };
     return this.getDST() ? summerTimes : winterTimes;
   }
 
   render() {
     return (
-      <div className="JummahTimesWrapper">
-        <table className="JummahTimesTable">
-          <thead>
-            <tr>
-              <th />
-              <th>{this.state._appConfig.get('Jummah_slot_1_label')}</th>
-              <th>{this.state._appConfig.get('Jummah_slot_2_label')}</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Jumu‘ah</td>
-              <td>{this.getJummahTimes()['slot_1']}</td>
-              <td>{this.getJummahTimes()['slot_2']}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <table className="JummahTimesTable">
+        <thead>
+          <tr>
+            <th />
+            <th>{this.state._appConfig.get('Jummah_slot_1_label')}</th>
+            <th>{this.state._appConfig.get('Jummah_slot_2_label')}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1st Jumu‘ah</td>
+            <td>{this.getJummahTimes()['slot_1']}</td>
+            <td>{this.getJummahTimes()['slot_2']}</td>
+          </tr>
+          <tr>
+            <td>2nd Jumu‘ah</td>
+            <td>{this.getJummahTimes()['slot_3']}</td>
+            <td>{this.getJummahTimes()['slot_4']}</td>
+          </tr>
+        </tbody>
+      </table>
     );
   }
 }
