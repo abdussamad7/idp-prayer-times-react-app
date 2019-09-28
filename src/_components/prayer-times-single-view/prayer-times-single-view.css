@@ -54,7 +54,8 @@
   .PrayerTimesSingleView {
     font-size: 1em;
     margin-left: 0;
-    width: 100%;
+    width: 190%;
+    padding-top: 0;
   }
 
   .PrayerTimesSingleView th:last-child {
@@ -85,5 +86,5 @@
 
 .PrayerTimesSingleView .nextJammahHighlight {
   font-weight: bolder;
-  color: #ff3995;
+  color: #e6e600;
 }
