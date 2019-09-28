@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import moment from 'moment';
 import './prayer-times-single-view.css';
 import PrayerData from '../prayer-data/prayer-data';
 import nextJammahTime from '../next-jamah-time/next-jamah-time';
@@ -9,7 +8,6 @@ class PrayerTimesSingleView extends Component {
     super(props);
     this.state = {
       prayerTimes: this.getPrayerTimes(),
-      tomorrowsPrayerTimes: this.getTomorrowsPrayerTimes(),
       nextJammah: this.getNextJammah(),
       jammahCheckingInterval: 60000
     };
@@ -18,14 +16,6 @@ class PrayerTimesSingleView extends Component {
   getPrayerTimes() {
     var _data = new PrayerData();
     return _data.getPrayerTimes();
-  }
-
-  getTomorrowsPrayerTimes() {
-    var date = moment()
-      .add(1, 'days')
-      .format('DD/MM/YYYY');
-    var _data = new PrayerData();
-    return _data.getPrayerTimes(date);
   }
 
   getNextJammah() {
@@ -62,7 +52,6 @@ class PrayerTimesSingleView extends Component {
               <th />
               <th>Begins</th>
               <th>Jama'ah</th>
-              <th>Tomorrow</th>
             </tr>
           </thead>
           <tbody>
@@ -78,7 +67,6 @@ class PrayerTimesSingleView extends Component {
               >
                 {this.state.prayerTimes['Fajr Jama‘ah']}
               </td>
-              <td>{this.state.tomorrowsPrayerTimes['Fajr Jama‘ah']}</td>
             </tr>
             <tr>
               <th>Zuhr</th>
@@ -92,7 +80,6 @@ class PrayerTimesSingleView extends Component {
               >
                 {this.state.prayerTimes['Zuhr Jama‘ah']}
               </td>
-              <td>{this.state.tomorrowsPrayerTimes['Zuhr Jama‘ah']}</td>
             </tr>
             <tr>
               <th>'Asr</th>
@@ -106,7 +93,6 @@ class PrayerTimesSingleView extends Component {
               >
                 {this.state.prayerTimes['Asr Jama‘ah']}
               </td>
-              <td>{this.state.tomorrowsPrayerTimes['Asr Jama‘ah']}</td>
             </tr>
             <tr>
               <th>Maghrib</th>
@@ -120,7 +106,6 @@ class PrayerTimesSingleView extends Component {
               >
                 {this.state.prayerTimes['Maghrib Jama‘ah']}
               </td>
-              <td>{this.state.tomorrowsPrayerTimes['Maghrib Jama‘ah']}</td>
             </tr>
             <tr>
               <th>Isha</th>
@@ -134,7 +119,6 @@ class PrayerTimesSingleView extends Component {
               >
                 {this.state.prayerTimes['Isha Jama‘ah']}
               </td>
-              <td>{this.state.tomorrowsPrayerTimes['Isha Jama‘ah']}</td>
             </tr>
           </tbody>
         </table>

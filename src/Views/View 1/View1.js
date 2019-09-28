@@ -2,10 +2,9 @@ import React, { Component } from 'react';
 import './View1.css';
 import Logo from '../../_components/logo/logo';
 import Clock from '../../_components/clock/clock';
-import PrayerTimes from '../../_components/prayer-times/prayer-times';
+import PrayerTimes from '../../_components/prayer-times-single-view/prayer-times-single-view';
 import Date from '../../_components/date/date';
 import AppConfig from '../../_components/app-config/app-config';
-import Branding from '../../_components/branding/branding';
 import JummahTimes from '../../_components/jummah-times/jummah-times';
 
 class View1 extends Component {
@@ -44,7 +43,6 @@ class View1 extends Component {
           </div>
           <JummahTimes />
         </div>
-        <Branding />
       </div>
     );
   }
