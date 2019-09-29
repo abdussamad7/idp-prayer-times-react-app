@@ -26,12 +26,10 @@ class View1 extends Component {
     return (
       <div className="View1">
         <div className="row">
-          <Logo />
-        </div>
-        <div className="row">
           <div className="col-12 col-md-6">
             <div className="row">
               <Clock />
+              <Logo />
             </div>
             <div className="row">
               <Date />
