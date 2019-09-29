@@ -1,12 +1,11 @@
 .SunriseAndZawwalWrapper {
-  margin-top: 70px;
+  margin-top: 10px;
   width: 100%;
   font-size: 3em;
 }
 
 .SunriseAndZawwalTable {
   float: right;
-  padding-right: 50px;
 }
 
 .SunriseAndZawwalTable td {

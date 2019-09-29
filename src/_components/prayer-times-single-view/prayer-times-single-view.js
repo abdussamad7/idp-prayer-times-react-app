@@ -68,6 +68,7 @@ class PrayerTimesSingleView extends Component {
                 {this.state.prayerTimes['Fajr Jama‘ah']}
               </td>
             </tr>
+            <div className="line"></div>
             <tr>
               <th>Zuhr</th>
               <td>{this.state.prayerTimes['Zuhr Begins']}</td>
@@ -81,6 +82,7 @@ class PrayerTimesSingleView extends Component {
                 {this.state.prayerTimes['Zuhr Jama‘ah']}
               </td>
             </tr>
+            <div className="line"></div>
             <tr>
               <th>'Asr</th>
               <td>{this.state.prayerTimes['Asr Mithl 2']}</td>
@@ -94,6 +96,7 @@ class PrayerTimesSingleView extends Component {
                 {this.state.prayerTimes['Asr Jama‘ah']}
               </td>
             </tr>
+            <div className="line"></div>
             <tr>
               <th>Maghrib</th>
               <td>{this.state.prayerTimes['Maghrib Begins']}</td>
@@ -107,6 +110,7 @@ class PrayerTimesSingleView extends Component {
                 {this.state.prayerTimes['Maghrib Jama‘ah']}
               </td>
             </tr>
+            <div className="line"></div>
             <tr>
               <th>Isha</th>
               <td>{this.state.prayerTimes['Isha Begins']}</td>
