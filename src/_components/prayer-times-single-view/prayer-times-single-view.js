@@ -69,7 +69,7 @@ class PrayerTimesSingleView extends Component {
               </td>
             </tr>
             <tr>
-              <th>Zuhr</th>
+              <th>Dhuhr</th>
               <td>{this.state.prayerTimes['Zuhr Begins']}</td>
               <td
                 className={
