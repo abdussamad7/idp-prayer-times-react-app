@@ -12,7 +12,7 @@
   margin-left: 60px;
   padding-top: 50px;
   width: 840px;
-  border-collapse: collapse; 
+  border-collapse: collapse;
 }
 
 .PrayerTimesSingleView th {
@@ -31,6 +31,11 @@
   padding-bottom: 10px;
   padding-top: 10px;
   border-bottom: 1px solid white;
+}
+
+
+.no-bottom-border th, .no-bottom-border td {
+  border-bottom: none;
 }
 
 .PrayerTimesSingleView th:first-child {

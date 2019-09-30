@@ -48,7 +48,7 @@ class PrayerTimesSingleView extends Component {
       <div className="PrayerTimeSingleViewWrapper">
         <table className="PrayerTimesSingleView">
           <thead>
-            <tr>
+            <tr className="no-bottom-border">
               <th />
               <th>Begins</th>
               <th>Jama'ah</th>
@@ -107,7 +107,7 @@ class PrayerTimesSingleView extends Component {
                 {this.state.prayerTimes['Maghrib Jama‘ah']}
               </td>
             </tr>
-            <tr>
+            <tr className="no-bottom-border">
               <th>Isha</th>
               <td>{this.state.prayerTimes['Isha Begins']}</td>
               <td
