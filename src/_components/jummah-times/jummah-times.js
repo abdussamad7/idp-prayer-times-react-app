@@ -36,10 +36,10 @@ class JummahTimes extends Component {
     };
 
     var winterTimes = {
-      slot_1: '12:45',
-      slot_2: '1:15',
-      slot_3: '1:45',
-      slot_4: '1:55'
+      slot_1: '12:15',
+      slot_2: '12:45',
+      slot_3: '1:00',
+      slot_4: '1:15'
     };
     return this.getDST() ? summerTimes : winterTimes;
   }
