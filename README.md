@@ -11,12 +11,6 @@ Built for Al Nehar Mosque & Education Centre
 ## Screenshot
 <img src="https://github.com/abdussamad7/idp-prayer-times-react-app/blob/master/screenshots/screenshot-1.png" alt="App Screenshot" />
 
-## Need help?
-
-If you need support, contact us on: [mosque.screens786@gmail.com](mailto:mosque.screens786@gmail.com)
-
-Join our discord channel here: https://discord.gg/CG7frj2
-
 ## Available Scripts
 
 In the project directory, you can run:
