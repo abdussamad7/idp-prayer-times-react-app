@@ -6,7 +6,7 @@ class AdditionalMessage extends Component {
     return (
       <div className="AdditionalMessageWrapper">
         <div className="button">
-          <a href="https://alneharmosque.files.wordpress.com/2019/10/903bf66f-667f-4d92-b33b-fc8c09e800f5.jpeg" target="_blank" rel="noopener noreferrer">View Timetable</a>
+          <a href="https://alneharmosque.files.wordpress.com/2019/11/77bf594d-6f99-4972-b46f-3af6a9c7f9b2.jpeg?w=1512" target="_blank" rel="noopener noreferrer">View Timetable</a>
         </div>
       </div>
     );
