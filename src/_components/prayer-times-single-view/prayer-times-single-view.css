@@ -1,6 +1,14 @@
 .PrayerTimeSingleViewWrapper {
   width: 52.5%;
 }
+
+@media only screen and (min-width: 600px) {
+  .PrayerTimeSingleViewWrapper {
+    width: 100%;
+  }
+}
+
+
 .PrayerTimesSingleViewWrapper {
   width: 100%;
 }
@@ -46,6 +54,7 @@
 .PrayerTimesSingleView .mithl-text {
   font-size: 0.5em;
   max-width: 100px;
+  margin-right: 10px;
 }
 
 .PrayerTimesSingleView td {
@@ -61,6 +70,12 @@
   font-weight: normal;
 }
 
+.PrayerTimesSingleView .bullet-list--no-decorations {
+  list-style-type: none;
+  font-size: 1em;
+  margin: 0;
+}
+
 @media only screen and (max-width: 600px) {
   .PrayerTimesSingleView {
     font-size: 1em;
@@ -70,7 +85,7 @@
   }
 
   .PrayerTimesSingleView th:last-child {
-    padding-left: 0;
+    padding-left: 20px;
   }
 
   .PrayerTimesSingleView td {
@@ -78,16 +93,16 @@
   }
 }
 
-@media only screen and (min-width: 600px) and (max-width: 1024px) {
+@media only screen and (min-width: 600px) {
   .PrayerTimesSingleView {
-    font-size: 2em;
+    font-size: 1.7em;
     margin-left: 0;
     width: 100%;
     padding: 30px;
   }
 
   .PrayerTimesSingleView th:last-child {
-    padding-left: 0;
+    padding-left: 40px;
   }
 
   .PrayerTimesSingleView td {

@@ -43,6 +43,27 @@ class PrayerTimesSingleView extends Component {
     this.stopInterval();
   }
 
+  getAsrTime() {
+    if (
+      this.state.prayerTimes['Asr Mithl 1'] &&
+      !this.state.prayerTimes['Asr Mithl 2']
+    ) {
+      return this.state.prayerTimes['Asr Mithl 1'];
+    } else if (
+      this.state.prayerTimes['Asr Mithl 2'] &&
+      !this.state.prayerTimes['Asr Mithl 1']
+    ) {
+      return this.state.prayerTimes['Asr Mithl 2'];
+    } else {
+      return (
+        <ul className="bullet-list--no-decorations">
+          <li><span className="mithl-text">Mithl 1 </span>{this.state.prayerTimes['Asr Mithl 1']}</li>
+          <li><span className="mithl-text">Mithl 2 </span>{this.state.prayerTimes['Asr Mithl 2']}</li>
+        </ul>
+      );
+    }
+  }
+
   render() {
     return (
       <div className="PrayerTimeSingleViewWrapper">
@@ -82,8 +103,8 @@ class PrayerTimesSingleView extends Component {
               </td>
             </tr>
             <tr>
-              <th>'Asr</th>
-              <td>{this.state.prayerTimes['Asr Mithl 2']}</td>
+            <th>'Asr</th>
+              <td>{this.getAsrTime()}</td>
               <td
                 className={
                   this.state.nextJammah.name === 'Asr'
