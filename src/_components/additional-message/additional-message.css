@@ -1,13 +1,12 @@
 .AdditionalMessageWrapper {
   text-align: center;
   margin: 0 auto;
-  margin-right: 10px;
+  margin-right: 0px;
   font-size: 1em;
   margin-top: 100px;
 }
 
 .button {
-    border-color: #e60050;
     padding: 9px 9px;
     border-radius: 5px;
     font-size: 13px;
@@ -16,35 +15,33 @@
 
 a {
   color: white;
-   text-decoration: none;
+  text-decoration: none;
+}
+
+.button:hover{
+  background-color: white;
+  color: white;
+}
+
+a:hover{
+  color: #0f715d;
 }
 
 .AdditionalMessageWrapper p {
   margin: 20px;
 }
 
-.AdditionalMessageWrapper .middle {
-  font-weight: bold;
-  font-size: 1.3em;
-}
-
 @media only screen and (max-width: 600px) {
   .AdditionalMessageWrapper {
     font-size: 1em;
-    margin-top: 15px;
+    margin-top: 20px;
     margin-right: 3px;
-  }
-  .AdditionalMessageWrapper .middle {
-    font-size: 1em;
   }
 }
 
-@media only screen and (min-width: 600px) and (max-width: 1024px) {
+@media only screen and (min-width: 600px) {
   .AdditionalMessageWrapper {
     font-size: 1em;
     margin-top: 15px;
-  }
-  .AdditionalMessageWrapper .middle {
-    font-size: 1em;
   }
 }

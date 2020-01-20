@@ -7,7 +7,7 @@ class AdditionalMessage extends Component {
     return (
       <div className="AdditionalMessageWrapper">
         <div className="button">
-           <a href={Pdf} target="_blank" rel="noopener noreferrer">View Timetable</a>
+           <a href={Pdf} target="_blank" rel="noopener noreferrer">View Full Timetable</a>
         </div>
       </div>
     );

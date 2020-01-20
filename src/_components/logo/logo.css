@@ -1,13 +1,19 @@
 .LogoWrapper img {
-  width: 107px;
-  display: block;
-  position: fixed;
-  left: 83%;
+  width: 105px;
+  position: absolute;
+  top: 0px;
+  left: 86%;
   transform: translateX(-50%);
 }
 
-@media only screen and (min-width: 300px) and (max-width: 1024px) {
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
   .LogoWrapper img {
+      width: 187px;
+  }
+}
 
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .LogoWrapper img {
+      position: relative;
   }
 }

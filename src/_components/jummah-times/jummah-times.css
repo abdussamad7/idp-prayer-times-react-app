@@ -6,8 +6,6 @@
 
 .JummahTimesTable {
   float: right;
-  padding-right: 50px;
-  width: 890px;
   margin-top: 20px;
 }
 
@@ -30,7 +28,7 @@
 
 @media only screen and (max-width: 600px) {
   .JummahTimesWrapper {
-    font-size: 1em;
+    font-size: 3em;
   }
 
   .JummahTimesTable {
@@ -41,7 +39,7 @@
 
   .JummahTimesTable th,
   .JummahTimesTable td {
-    padding-left: 20px;
+    padding-left: 0px;
     min-width: 0;
   }
 
@@ -50,24 +48,25 @@
   }
 }
 
-@media only screen and (min-width: 600px) and (max-width: 1024px) {
-  .JummahTimesWrapper {
-    font-size: 2em;
-  }
-
+@media only screen and (min-width: 600px) {
   .JummahTimesTable {
+    font-size: 1.7em;
     width: 100%;
-    padding-right: 30px;
-    padding-left: 40px;
   }
 
   .JummahTimesTable th,
   .JummahTimesTable td {
-    padding-left: 0;
+    padding-left: 33px;
     min-width: 0;
   }
 
   .JummahTimesTable td {
     min-width: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .JummahTimesTable  {
+    font-size: 1.2em;
   }
 }
