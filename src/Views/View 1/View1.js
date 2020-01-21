@@ -43,17 +43,17 @@ class View1 extends Component {
               <PrayerTimes />
             </div>
           </div>
-          <div className="col-12 col-md-6">
+          <div className="col-12 col-md-12">
             <div className="row">
               <JummahTimes />
             </div>
           </div>
-          <div className="col-12 col-md-6">
+          <div className="col-12 col-md-12">
             <div className="row">
               <SunriseAndZawwal />
             </div>
           </div>
-          <div className="col-12 col-md-6">
+          <div className="col-12 col-md-12">
             <div className="row">
               <AdditionalMessage />
             </div>

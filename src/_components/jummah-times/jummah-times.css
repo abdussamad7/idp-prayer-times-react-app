@@ -50,7 +50,7 @@
 
 @media only screen and (min-width: 600px) {
   .JummahTimesTable {
-    font-size: 1.7em;
+    font-size: 1.3em;
     width: 100%;
   }
 
@@ -68,5 +68,15 @@
 @media only screen and (min-width: 768px) {
   .JummahTimesTable  {
     font-size: 1.2em;
+    width: 99%;
   }
 }
+
+@media only screen and (min-width: 768px) {
+  .JummahTimesTable td:first-child {
+    padding-left: 52%;
+  }
+}
+
+
+

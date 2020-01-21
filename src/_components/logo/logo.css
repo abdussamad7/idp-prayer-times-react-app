@@ -6,14 +6,15 @@
   transform: translateX(-50%);
 }
 
-@media only screen and (min-width: 600px) and (max-width: 1024px) {
+@media only screen and (min-width: 600px) {
   .LogoWrapper img {
       width: 187px;
+      margin-left: -10px;
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+/* @media only screen and (min-width: 925px) {
   .LogoWrapper img {
       position: relative;
   }
-}
+} */
