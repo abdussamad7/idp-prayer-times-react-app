@@ -30,7 +30,7 @@
 
 @media only screen and (min-width: 600px) {
   .SunriseAndZawwalWrapper {
-    font-size: 1.7em;
+    font-size: 1.3em;
   }
 
   .SunriseAndZawwalTable th,
@@ -39,8 +39,14 @@
   }
 }
 
-
 @media only screen and (min-width: 768px) {
+  .SunriseAndZawwalWrapper {
+    width: 99%;
+  }
+}
+
+
+@media only screen and (min-width: 925px) {
   .SunriseAndZawwalWrapper {
     font-size: 1.2em;
   }

@@ -95,8 +95,8 @@
 
 @media only screen and (min-width: 600px) {
   .PrayerTimesSingleView {
-    font-size: 1.7em;
-    margin-left: 0;
+    font-size: 1.3em;
+    margin-left: 0px;
     width: 100%;
     padding: 30px;
   }
@@ -113,4 +113,12 @@
 .PrayerTimesSingleView .nextJammahHighlight {
   font-weight: bolder;
   color: #e6e600;
+}
+
+
+@media only screen and (min-width: 768px) {
+  .PrayerTimesSingleView {
+    width: 95%;
+    margin-left: 20px;
+  }
 }

@@ -45,3 +45,9 @@ a:hover{
     margin-top: 15px;
   }
 }
+
+@media only screen and (min-width: 768px) {
+  .AdditionalMessageWrapper {
+    margin-right: 15px;
+  }
+}
