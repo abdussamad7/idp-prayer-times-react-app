@@ -25,6 +25,7 @@ class PrayerData {
 
     if (!spreadsheetUrl) {
       alert('CSV not set');
+      //test
     }
 
     return csvtojson()
