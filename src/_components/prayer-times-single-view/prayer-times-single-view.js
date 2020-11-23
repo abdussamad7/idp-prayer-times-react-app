@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import moment from 'moment';
 import './prayer-times-single-view.css';
 import PrayerData from '../prayer-data/prayer-data';
 import nextJammahTime from '../next-jamah-time/next-jamah-time';
@@ -8,6 +9,7 @@ class PrayerTimesSingleView extends Component {
     super(props);
     this.state = {
       prayerTimes: this.getPrayerTimes(),
+      tomorrowsPrayerTimes: this.getTomorrowsPrayerTimes(),
       nextJammah: this.getNextJammah(),
       jammahCheckingInterval: 60000
     };
@@ -16,6 +18,14 @@ class PrayerTimesSingleView extends Component {
   getPrayerTimes() {
     var _data = new PrayerData();
     return _data.getPrayerTimes();
+  }
+
+  getTomorrowsPrayerTimes() {
+    var date = moment()
+      .add(1, 'days')
+      .format('DD/MM/YYYY');
+    var _data = new PrayerData();
+    return _data.getPrayerTimes(date);
   }
 
   getNextJammah() {
@@ -45,20 +55,20 @@ class PrayerTimesSingleView extends Component {
 
   getAsrTime() {
     if (
-      this.state.prayerTimes['Asr Mithl 1'] &&
-      !this.state.prayerTimes['Asr Mithl 2']
+      this.state.prayerTimes['asr_1_begins'] &&
+      !this.state.prayerTimes['asr_2_begins']
     ) {
-      return this.state.prayerTimes['Asr Mithl 1'];
+      return this.state.prayerTimes['asr_1_begins'];
     } else if (
-      this.state.prayerTimes['Asr Mithl 2'] &&
-      !this.state.prayerTimes['Asr Mithl 1']
+      this.state.prayerTimes['asr_2_begins'] &&
+      !this.state.prayerTimes['asr_1_begins']
     ) {
-      return this.state.prayerTimes['Asr Mithl 2'];
+      return this.state.prayerTimes['asr_2_begins'];
     } else {
       return (
         <ul className="bullet-list--no-decorations">
-          <li><span className="mithl-text">Mithl 1 </span>{this.state.prayerTimes['Asr Mithl 1']}</li>
-          <li><span className="mithl-text">Mithl 2 </span>{this.state.prayerTimes['Asr Mithl 2']}</li>
+          <li>{this.state.prayerTimes['asr_1_begins']}</li>
+          <li>{this.state.prayerTimes['asr_2_begins']}</li>
         </ul>
       );
     }
@@ -69,16 +79,17 @@ class PrayerTimesSingleView extends Component {
       <div className="PrayerTimeSingleViewWrapper">
         <table className="PrayerTimesSingleView">
           <thead>
-            <tr className="no-bottom-border">
+            <tr>
               <th />
               <th>Begins</th>
               <th>Jama'ah</th>
+              <th>Tomorrow</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <th>Fajr</th>
-              <td>{this.state.prayerTimes['Fajr Begins']}</td>
+              <td>{this.state.prayerTimes['fajr_begins']}</td>
               <td
                 className={
                   this.state.nextJammah.name === 'Fajr'
@@ -86,12 +97,13 @@ class PrayerTimesSingleView extends Component {
                     : null
                 }
               >
-                {this.state.prayerTimes['Fajr Jama‘ah']}
+                {this.state.prayerTimes['fajr_jamaah']}
               </td>
+              <td>{this.state.tomorrowsPrayerTimes['fajr_jamaah']}</td>
             </tr>
             <tr>
-              <th>Dhuhr</th>
-              <td>{this.state.prayerTimes['Zuhr Begins']}</td>
+              <th>Zuhr</th>
+              <td>{this.state.prayerTimes['zuhr_begins']}</td>
               <td
                 className={
                   this.state.nextJammah.name === 'Zuhr'
@@ -99,11 +111,12 @@ class PrayerTimesSingleView extends Component {
                     : null
                 }
               >
-                {this.state.prayerTimes['Zuhr Jama‘ah']}
+                {this.state.prayerTimes['zuhr_jamaah']}
               </td>
+              <td>{this.state.tomorrowsPrayerTimes['zuhr_jamaah']}</td>
             </tr>
             <tr>
-            <th>'Asr</th>
+              <th>'Asr</th>
               <td>{this.getAsrTime()}</td>
               <td
                 className={
@@ -112,12 +125,13 @@ class PrayerTimesSingleView extends Component {
                     : null
                 }
               >
-                {this.state.prayerTimes['Asr Jama‘ah']}
+                {this.state.prayerTimes['asr_jamaah']}
               </td>
+              <td>{this.state.tomorrowsPrayerTimes['asr_jamaah']}</td>
             </tr>
             <tr>
               <th>Maghrib</th>
-              <td>{this.state.prayerTimes['Maghrib Begins']}</td>
+              <td>{this.state.prayerTimes['maghrib_begins']}</td>
               <td
                 className={
                   this.state.nextJammah.name === 'Maghrib'
@@ -125,12 +139,13 @@ class PrayerTimesSingleView extends Component {
                     : null
                 }
               >
-                {this.state.prayerTimes['Maghrib Jama‘ah']}
+                {this.state.prayerTimes['maghrib_jamaah']}
               </td>
+              <td>{this.state.tomorrowsPrayerTimes['maghrib_jamaah']}</td>
             </tr>
-            <tr className="no-bottom-border">
+            <tr>
               <th>Isha</th>
-              <td>{this.state.prayerTimes['Isha Begins']}</td>
+              <td>{this.state.prayerTimes['isha_begins']}</td>
               <td
                 className={
                   this.state.nextJammah.name === 'Isha'
@@ -138,8 +153,9 @@ class PrayerTimesSingleView extends Component {
                     : null
                 }
               >
-                {this.state.prayerTimes['Isha Jama‘ah']}
+                {this.state.prayerTimes['isha_jamaah']}
               </td>
+              <td>{this.state.tomorrowsPrayerTimes['isha_jamaah']}</td>
             </tr>
           </tbody>
         </table>
